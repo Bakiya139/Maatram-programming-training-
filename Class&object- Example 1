@@ -1,0 +1,25 @@
+
+
+from datetime import date
+class Patient:
+    def __init__(self,name,gender,city,dob):
+        self.name = name
+        self.gender = gender
+        self.city = city
+        self.dob = dob
+    
+    def age(self):
+        current_age = date.today().year
+        return current_age - self.dob
+        
+    def address(self):
+        addr = f"Name:{self. name}\nDOB:{self.dob}\nGender:{self.gender}\nCity:{self.city}"
+        return addr
+p1 = Patient("Anand","Male","Chennai",1998)
+p2 = Patient("Geetha","Female","Madurai",1996)
+print(p1.address())
+print(p2.address()) 
+print(p1.age())
+print(p2.age())
+
+
